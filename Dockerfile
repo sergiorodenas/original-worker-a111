@@ -56,7 +56,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 #&& \ pip install -r requirements_versions.txt
 
 COPY --from=download /repositories/ ${ROOT}/repositories/
-COPY --from=download models/lazymix.safetensors /model.safetensors
+COPY models/lazymix.safetensors /model.safetensors
 COPY models/sam_hq_vit_l.pth ${ROOT}/repositories/sd-webui-segment-anything/models/sam/sam_hq_vit_l.pth
 COPY models/groundingdino_swint_ogc.pth ${ROOT}/repositories/sd-webui-segment-anything/models/grounding-dino/groundingdino_swint_ogc.pth
 RUN mkdir ${ROOT}/interrogate && cp ${ROOT}/repositories/clip-interrogator/data/* ${ROOT}/interrogate
