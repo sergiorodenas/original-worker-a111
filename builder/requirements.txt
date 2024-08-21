@@ -49,6 +49,7 @@ torchmetrics==0.11.4
 slack_sdk
 diskcache
 imageio_ffmpeg
+pillow_avif
 
 # Direct Git Dependencies
 # These dependencies are directly cloned from GitHub. Ensure the specified commits/tags are compatible.
