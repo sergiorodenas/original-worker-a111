@@ -61,7 +61,8 @@ COPY models/sam_hq_vit_l.pth ${ROOT}/repositories/sd-webui-segment-anything/mode
 COPY models/groundingdino_swint_ogc.pth ${ROOT}/repositories/sd-webui-segment-anything/models/grounding-dino/groundingdino_swint_ogc.pth
 RUN mkdir ${ROOT}/interrogate && cp ${ROOT}/repositories/clip-interrogator/data/* ${ROOT}/interrogate
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -r ${ROOT}/repositories/CodeFormer/requirements.txt
+    pip install -r ${ROOT}/repositories/CodeFormer/requirements.txt && \
+    pip install -r ${ROOT}/repositories/sd-webui-segment-anything/requirements.txt
 
 # Install Python dependencies (Worker Template)
 COPY builder/requirements.txt /requirements.txt
