@@ -77,7 +77,7 @@ ADD src .
 RUN sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' /usr/local/lib/python3.10/site-packages/basicsr/data/degradations.py
 
 COPY builder/cache.py /stable-diffusion-webui/cache.py
-RUN cd /stable-diffusion-webui && python cache.py --use-cpu=all --ckpt /model.safetensors
+#RUN cd /stable-diffusion-webui && python cache.py --use-cpu=all --ckpt /model.safetensors
 
 # Cleanup section (Worker Template)
 RUN apt-get autoremove -y && \
