@@ -79,6 +79,9 @@ RUN sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_graysc
 COPY builder/cache.py /stable-diffusion-webui/cache.py
 #RUN cd /stable-diffusion-webui && python cache.py --use-cpu=all --ckpt /model.safetensors
 
+COPY config.json ${ROOT}/config.json
+COPY ui_config.json ${ROOT}/ui_config.json
+
 # Cleanup section (Worker Template)
 RUN apt-get autoremove -y && \
     apt-get clean -y && \
