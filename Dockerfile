@@ -28,7 +28,7 @@ RUN . /clone.sh sd-webui-replacer https://github.com/light-and-ray/sd-webui-repl
 # ---------------------------------------------------------------------------- #
 FROM python:3.10.9-slim as build_final_image
 
-ARG SHA=c19d04436496ab29ddca4758a792831ae41b31de
+ARG SHA=feee37d75f1b168768014e4634dcb156ee649c05
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PIP_PREFER_BINARY=1 \
