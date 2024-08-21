@@ -50,6 +50,7 @@ slack_sdk
 diskcache
 imageio_ffmpeg
 pillow-avif-plugin
+huggingface_hub
 
 # Direct Git Dependencies
 # These dependencies are directly cloned from GitHub. Ensure the specified commits/tags are compatible.
